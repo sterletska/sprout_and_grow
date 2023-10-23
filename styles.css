@@ -1,0 +1,248 @@
+/*CSS Reset*/
+body,
+header,
+nav,
+main,
+footer,
+h1,
+div,
+img,
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for box sizing applies to all elements */
+* {
+    box-sizing: border-box;
+}
+
+.tablet-desktop img {
+    display: none;
+}
+
+/*Logo styles*/
+header img {
+    display: block;
+    max-width: 100%;
+    margin: 1% auto;
+}
+
+/*Style rules for Navigation area*/
+nav {
+    padding: 1%;
+    margin-bottom: 1%;
+    background: url(images/white-leaf.jpg) center no-repeat;
+    background-size: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    font-size: 1.25em;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+nav li a {
+    display: block;
+    color: #054d3b;
+    padding: 0.5em 1em;
+}
+
+nav li a:hover {
+    color: #83ae48;
+}
+
+/*Style rules for main content*/
+main {
+    font-size: 1.25em;
+    font-family: serif;
+    color: #054d3b;
+}
+
+/*First block of content style rules*/
+#first-block {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    color: #054d3b;
+    text-align: center;
+}
+
+#first-block img {
+    width: 50%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 0% auto;
+
+}
+
+/*Second block of content style rules*/
+#sec-block {
+    padding: 5%;
+    color: #054d3b;
+    font-weight: 700;
+    text-align: center;
+    background: url(images/light-green-leaf.jpg) no-repeat;
+    background-size: 100%;
+}
+
+/*Third block of content style rules*/
+#gardener,
+#enthusiast,
+#educator {
+    display: block;
+}
+
+.photo {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 1% 10%;
+}
+
+.sec-text {
+    padding: 1% 10%;
+}
+
+/*Style rules for footer content*/
+footer .copyright {
+    font-size: 0.75em;
+    text-align: center;
+    color: #054d3b;
+    padding: 2% 4%;
+    float: left;
+    width: 75%;
+}
+
+footer a {
+    color: #054d3b;
+    text-decoration: none;
+}
+
+.social {
+    float: right;
+    width: 20%;
+    padding: 2%;
+}
+
+.social img {
+    display: inline-block;
+    padding-right: 10%;
+}
+
+/*Media Query for Tablet Viewport */
+@media screen and (min-width: 768px),
+print {
+
+    /*Banner styles*/
+    .tablet-desktop img {
+        display: block;
+        max-width: 100%;
+    }
+
+    /*Style rules for navigation area*/
+    nav {
+        background: none;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    nav li a {
+        text-decoration: none;
+    }
+
+    /*First block of content style rules*/
+    #first-block {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #first-block img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .first-text {
+        padding: 3% 5%;
+    }
+
+    /*Second block of content style rules*/
+    #sec-block {
+        padding: 5% 10%;
+    }
+
+}
+
+/* Media Query for Laptop Viewport */
+@media screen and (min-width: 1024px),
+print {
+
+    /*Third block of content style rules*/
+    #gardener,
+    #educator {
+        display: flex;
+        flex-direction: row;
+        margin: 3% auto;
+        justify-content: center;
+    }
+
+    #enthusiast {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 3% auto;
+    }
+
+    .sec-text {
+        font-size: 1em;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1366px),
+print {
+
+    /*Logo styles*/
+    header img {
+        float: left;
+        max-width: 100%;
+        margin: 1% auto;
+    }
+
+    /*First block of content style rules*/
+    .first-text {
+        font-size: 1.4em;
+        font-weight: 300;
+        padding: 5% 10%;
+    }
+
+    /*Second block of content style rules*/
+    #sec-block {
+        font-size: 1.4em;
+        font-weight: 300;
+        padding: 5% 15%;
+    }
+
+    /*Third block of content style rules*/
+
+    #gardener,
+    #educator,
+    #enthusiast {
+        width: 80%;
+    }
+
+    .sec-text {
+        font-size: 1.3em;
+    }
+
+
+}
