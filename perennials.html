@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <!--CSS file link-->
+    <link rel="stylesheet" href="styles.css">
+    <title>Perennials</title>
+    <!--Description meta tag for SEO; describes the purpose of each page. it's different for each page-->
+    <meta name="description"
+        content="The Sprout and Grow nursery offers high-quality organic plants, expert guidance, and educational resources about growing sustainable organic gardens.">
+    <!--Favicon links-->
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+</head>
+
+<body>
+
+    <header>
+        <!--Sprout and Grow Logo-->
+        <a href="index.html"><img src="images/Sprout_logo.png" alt="Sprout and Grow logo"></a>
+    </header>
+    <!--Website Navigation-->
+    <nav aria-label="main menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="plants.html">Our Plants</a></li>
+            <li><a href="tips.html">Tips & Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!--Main Content-->
+    <main id="perennials-content">
+        <!--<a href="plants.html" class="back-btn">&#8249; Back</a>-->
+
+        <h1 class="article-heading">Perennial Plants</h1>
+        <!--Area for Plant's cards-->
+        <div id="pr-flex">
+            <div id="plants-container">
+
+                <article class="card-p">
+
+                    <div class="card-p-img">
+                        <a href="cala.html"><img src="images/cala-lily.jpg" alt="White cala lily plant image"></a>
+                    </div>
+
+                    <div class="card-p-text">
+                        <a href="cala.html">
+                            <h2>Cala&nbsp;Lily</h2>
+                            <p>$15.00</p>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-p">
+                    <div class="card-p-img">
+                        <a href="#"><img src="images/coreopsis.jpg" alt="Yellow coreopsis flower image"></a>
+                    </div>
+
+                    <div class="card-p-text">
+                        <a href="#">
+                            <h2>Coreopsis</h2>
+                            <p>$13.00</p>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-p">
+                    <div class="card-p-img">
+                        <a href="#"><img src="images/daisy.jpg" alt="White daisy flower image"></a>
+                    </div>
+
+                    <div class="card-p-text">
+                        <a href="#">
+                            <h2>Daisy</h2>
+                            <p>$11.00</p>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-p">
+                    <div class="card-p-img">
+                        <a href="#"><img src="images/paeonia.jpg" alt="Pink paeonia flower image"></a>
+                    </div>
+
+                    <div class="card-p-text">
+                        <a href="#">
+                            <h2>Paeonia</h2>
+                            <p>$17.00</p>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-p">
+                    <div class="card-p-img">
+                        <a href="#"><img src="images/perennial.jpg" alt="Purple coneflower plant image"></a>
+                    </div>
+
+                    <div class="card-p-text">
+                        <a href="#">
+                            <h2>Coneflower</h2>
+                            <p>$10.00</p>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-p">
+                    <div class="card-p-img">
+                        <a href="#"><img src="images/hostas.jpg" alt="Hosta plant with green and white leaves"></a>
+                    </div>
+
+                    <div class="card-p-text">
+                        <a href="#">
+                            <h2>Hosta</h2>
+                            <p>$8.00</p>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-p">
+                    <div class="card-p-img">
+                        <a href="#"><img src="images/dianthus.jpg" alt="Pink dianthus flower image"></a>
+                    </div>
+
+                    <div class="card-p-text">
+                        <a href="#">
+                            <h2>Dianthus</h2>
+                            <p>$15.00</p>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card-p">
+                    <div class="card-p-img">
+                        <a href="#"><img src="images/verbena.jpg" alt="Purple verbena flowers image"></a>
+                    </div>
+
+                    <div class="card-p-text">
+                        <a href="#">
+                            <h2>Verbena</h2>
+                            <p>$9.00</p>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Sidebar for plant filter-->
+            <aside id="perennial">
+                <form action="#" id="plant-filter">
+                    <fieldset>
+                        <legend id="form-headline">Filter Plants by Characteristics</legend>
+                        <label for="plant-search" id="plant-sr-label">Search Plant by Name</label><br>
+                        <input type="search" id="plant-search" placeholder="Botanical or Common Name" name="q"><br>
+                    </fieldset>
+
+
+                    <div id="height-spread">
+                        <fieldset>
+                            <legend>Height:</legend>
+                            <select name="height" id="height">
+                                <option value="1ft">&#60; 1ft</option>
+                                <option value="1-2ft">1-2ft</option>
+                                <option value="2-6ft">2-6ft</option>
+                                <option value="7-10ft">7-10ft</option>
+                                <option value="12-20ft">12-20ft</option>
+                                <option value="21-30ft">21-30ft</option>
+                                <option value="31ft">31ft+</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Spread:</legend>
+                            <select name="spread" id="spread">
+                                <option value="1feet">&#60; 1ft</option>
+                                <option value="1-2feet">1-2ft</option>
+                                <option value="2-6feet">2-6ft</option>
+                                <option value="7-11feet">7-11ft</option>
+                                <option value="12-20feet">12-20ft</option>
+                                <option value="21-30feet">21-30ft</option>
+                                <option value="31ft">31ft+</option>
+                            </select>
+                        </fieldset>
+                    </div>
+
+                    <fieldset>
+                        <legend>Bloom time:</legend>
+                        <input type="checkbox" name="bloom" id="spring">
+                        <label for="spring">Spring</label>
+                        <input type="checkbox" name="bloom" id="summer">
+                        <label for="summer">Summer</label>
+                        <input type="checkbox" name="bloom" id="fall">
+                        <label for="fall">Fall</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Growth Rate:</legend>
+                        <input type="checkbox" name="growth" id="slow">
+                        <label for="slow">Slow</label>
+                        <input type="checkbox" name="growth" id="moderate">
+                        <label for="moderate">Moderate</label>
+                        <input type="checkbox" name="growth" id="fast">
+                        <label for="fast">Fast</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Sun Exposure:</legend>
+                        <input type="checkbox" name="sun" id="fullsun">
+                        <label for="fullsun">Full Sun</label>
+                        <input type="checkbox" name="sun" id="partsun">
+                        <label for="partsun">Part Sun</label>
+                        <input type="checkbox" name="sun" id="shade">
+                        <label for="shade">Shade</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Maintenance Level:</legend>
+                        <input type="checkbox" name="maintenance" id="lowm">
+                        <label for="lowm">Low</label>
+                        <input type="checkbox" name="maintenance" id="mediumm">
+                        <label for="mediumm">Medium</label>
+                        <input type="checkbox" name="maintenance" id="highm">
+                        <label for="highm">High</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Water Requirements:</legend>
+                        <input type="radio" name="water" id="low">
+                        <label for="low">Low</label>
+                        <input type="radio" name="water" id="medium">
+                        <label for="medium">Medium</label>
+                        <input type="radio" name="water" id="high">
+                        <label for="high">High</label>
+                    </fieldset><br>
+
+                    <input type="reset" name="reset" id="btn-2" value="Clear All" class="btn-2">
+                    <input type="submit" name="submit" id="btn" value="Apply" class="btn">
+                </form>
+            </aside>
+            <!--Page controls-->
+        </div>
+        <div id="controls" class="clearfix">
+            <a href="plants.html" class="back-btn">&#8249; Previous</a>
+            <a href="#" class="back-btn2">&#8250; Next</a>
+        </div>
+    </main>
+
+    <!--Footer area-->
+    <footer>
+        <div class="copyright">
+            <p>&copy; Copyright 2023. All Rights Reserved. <br>Contact us: <a
+                    href="mailto:sprout_grow@gmail.com">sprout_grow@gmail.com</a></p>
+        </div>
+
+        <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook-logo.png"
+                    alt="black and white Facebook logo"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/" target="_blank"><img src="images/twitter-logo.png"
+                    alt="black and white Twitter logo"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

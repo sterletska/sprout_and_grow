@@ -5,9 +5,12 @@ nav,
 main,
 footer,
 h1,
+h5,
 div,
 img,
-ul {
+ul,
+fieldset,
+article {
     margin: 0;
     padding: 0;
     border: 0;
@@ -18,7 +21,23 @@ ul {
     box-sizing: border-box;
 }
 
-.tablet-desktop img {
+/*Style rules for body content*/
+body {
+    position: relative;
+    padding-bottom: 63px;
+    min-height: 100vh;
+    background-color: #fafaf8;
+}
+
+/*Links styles*/
+a {
+    text-decoration: none;
+    color: #054d3b;
+}
+
+/*Hero image*/
+.tablet-desktop img,
+#hero {
     display: none;
 }
 
@@ -33,8 +52,66 @@ header img {
 nav {
     padding: 1%;
     margin-bottom: 1%;
-    background: url(images/white-leaf.jpg) center no-repeat;
-    background-size: 100%;
+}
+
+@keyframes nav-anim {
+    0% {
+        border: 2px solid rgba(5, 77, 59, 0.8);
+    }
+
+    20% {
+        border: 2px solid rgba(5, 77, 59, 0.4);
+        border-top: 2px solid transparent;
+    }
+
+    40% {
+        border: 2px solid rgba(5, 77, 59, 0.1);
+        border-right: 2px solid transparent;
+    }
+
+    60% {
+        border: 2px solid rgba(5, 77, 59, 0.4);
+        border-bottom: 2px solid transparent;
+    }
+
+    80% {
+        border: 2px solid rgba(5, 77, 59, 0.7);
+        border-left: 2px solid transparent;
+    }
+
+    100% {
+        border: 2px solid rgba(5, 77, 59, 0.8);
+    }
+}
+
+@-webkit-keyframes nav-anim {
+    0% {
+        border: 2px solid rgba(5, 77, 59, 0.8);
+    }
+
+    20% {
+        border: 2px solid rgba(5, 77, 59, 0.4);
+        border-top: 2px solid transparent;
+    }
+
+    40% {
+        border: 2px solid rgba(5, 77, 59, 0.1);
+        border-right: 2px solid transparent;
+    }
+
+    60% {
+        border: 2px solid rgba(5, 77, 59, 0.4);
+        border-bottom: 2px solid transparent;
+    }
+
+    80% {
+        border: 2px solid rgba(5, 77, 59, 0.7);
+        border-left: 2px solid transparent;
+    }
+
+    100% {
+        border: 2px solid rgba(5, 77, 59, 0.8);
+    }
 }
 
 nav ul {
@@ -43,32 +120,37 @@ nav ul {
 }
 
 nav li {
-    font-size: 1.25em;
-    font-family: sans-serif;
-    font-weight: bold;
+    font-family: 'Satisfy', sans-serif;
+    font-size: 1.6em;
 }
 
 nav li a {
+
     display: block;
     color: #054d3b;
     padding: 0.5em 1em;
+    border-radius: 15px;
 }
 
 nav li a:hover {
     color: #83ae48;
+    animation: nav-anim 0.6s linear;
 }
 
-/*Style rules for main content*/
+nav li a:active {
+    animation: nav-anim 0.6s linear;
+}
+
+
+/*Style rules for Homepage main content*/
 main {
     font-size: 1.25em;
-    font-family: serif;
+    font-family: sans-serif;
     color: #054d3b;
 }
 
-/*First block of content style rules*/
+/*First block of Homepage content style rules*/
 #first-block {
-    display: flex;
-    flex-direction: column;
     padding: 5%;
     color: #054d3b;
     text-align: center;
@@ -81,20 +163,32 @@ main {
     border-radius: 4px;
     padding: 5px;
     margin: 0% auto;
-
+    background-color: #fff;
 }
 
-/*Second block of content style rules*/
+.first-text h1 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 2em;
+}
+
+/*Second block of Homepage content style rules*/
 #sec-block {
+    display: block;
     padding: 5%;
     color: #054d3b;
     font-weight: 700;
     text-align: center;
-    background: url(images/light-green-leaf.jpg) no-repeat;
-    background-size: 100%;
+    background: url(images/light-green-leaf-400.jpg) no-repeat;
+    background-size: cover;
+    border: 5px solid #fff;
 }
 
-/*Third block of content style rules*/
+#sec-block h1 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 2em;
+}
+
+/*Third block of Homepage content style rules*/
 #gardener,
 #enthusiast,
 #educator {
@@ -106,20 +200,578 @@ main {
     border-radius: 4px;
     padding: 5px;
     margin: 1% 10%;
+    background-color: #fff;
 }
 
 .sec-text {
     padding: 1% 10%;
 }
 
-/*Style rules for footer content*/
+.sec-text h2 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 1.6em;
+}
+
+/*Styles for Plants page*/
+#pt-content {
+    margin: 3% 10%;
+}
+
+/*Style for plant type card*/
+#content article {
+    background-color: #ffffff;
+}
+
+.card {
+    max-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    margin: 2% auto;
+    background-color: #ffffff;
+}
+
+.card-text {
+    padding: 20px;
+}
+
+.card-text h1 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 1.7em;
+}
+
+.tb {
+    font-weight: 600;
+}
+
+.card-img {
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+/*Styles for the Plants page - plant kind description*/
+summary {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 1.25em
+}
+
+/*Styles for the Plants page - the list of plant's benefits*/
+details ul {
+    padding: 0 20px;
+}
+
+details li {
+    padding-bottom: 10px;
+}
+
+/*Search field styles*/
+#search {
+    margin: 3% 10%;
+    font-family: sans-serif;
+    color: #054d3b;
+}
+
+#sr-plant {
+    padding: 9px;
+}
+
+#sr-btn {
+    color: white;
+    background-color: #054d3b;
+    font-family: sans-serif;
+    border: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+}
+
+#sr-btn:hover {
+    background-color: #83ae48;
+    color: #054d3b;
+    border: none;
+}
+
+#search label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+/*Styles for Perennials page*/
+#perennials-content {
+    margin: 3% 10%;
+}
+
+/*Sidebar for Perenial page*/
+#perennial {
+    width: 100%;
+    background-image: url(images/white-leaf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 20px;
+    border: 5px solid #fff;
+}
+
+
+/*Plant filter form styles*/
+#plant-filter {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#form-headline {
+    font-size: 1.2em;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+legend {
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#plant-filter input[type="checkbox"]+label,
+#plant-filter input[type="radio"]+label {
+    display: inline;
+    font-size: 0.9em;
+}
+
+select {
+    padding: 8px 20px;
+    border: 1px solid rgba(5, 77, 59, 0.5);
+    border-radius: 5px;
+}
+
+#plant-search {
+    padding: 10px 25px;
+    border: 1px solid rgba(5, 77, 59, 0.5);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#plant-sr-label {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/*Styles for Perennials page. Height and Spread dropdowns*/
+#height-spread {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2%;
+}
+
+#height-spread fieldset {
+    margin: 0;
+}
+
+#height-spread legend {
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+/*clear all button styles*/
+.btn-2 {
+    padding: 10px 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid rgba(5, 77, 59, 0.5);
+    display: inline-block;
+    cursor: pointer;
+    background-color: #fff;
+    color: #054d3b;
+    text-align: center;
+    font-size: 0.9em;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 10px 10px 0;
+}
+
+/*next and previous page controls style*/
+#controls {
+    margin: 3% 3%;
+}
+
+/*card styles for Perennial page*/
+.card-p {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #ffffff;
+    max-width: 100%;
+}
+
+.card-p-text {
+    padding: 3%;
+    text-align: center;
+}
+
+.card-p-text h2 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+.card-p-img {
+    max-width: 60%;
+}
+
+.card-p-img img {
+    padding: 10px;
+    max-width: 100%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card-p:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+/*Perennials page styles. Next & Previous buttons*/
+.back-btn,
+.back-btn2 {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background-color: #fafaf8;
+    color: #054d3b;
+}
+
+.back-btn:hover {
+    background-color: #83ae48;
+    color: #fff;
+}
+
+.back-btn2:hover {
+    background-color: #83ae48;
+    color: #fff;
+}
+
+.back-btn {
+    float: left;
+}
+
+.back-btn2 {
+    float: right;
+}
+
+/*Styles for Tips & Resources main area*/
+#tip-content {
+    margin: 3% 10%;
+}
+
+.pg-heading {
+    font-family: 'Satisfy', sans-serif;
+    margin: 3%;
+    padding: 20px;
+}
+
+article h3 {
+    font-size: 1em;
+}
+
+/*Styles for a tip container*/
+.tip {
+    margin-bottom: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1% 3%;
+    background-color: #ffffff;
+    font-size: 0.9em;
+}
+
+.tip img {
+    display: none;
+}
+
+/*Styles for Tips & Resources aside area*/
+aside {
+    width: 100%;
+    background-image: url(images/white-leaf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 20px;
+    border: 5px solid #fff;
+}
+
+aside h3 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 1.3em;
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside li {
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
+/*Styles for Contact page*/
+#cp-content {
+    margin: 3% 10%;
+    text-align: center;
+    padding: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-image: url(images/white-leaf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #fff;
+    max-width: fit-content;
+    height: fit-content;
+}
+
+#cp-content h1 {
+    font-family: 'Satisfy', sans-serif;
+    margin-bottom: 3%;
+}
+
+iframe {
+    max-width: fit-content;
+    height: fit-content;
+    margin-top: 3%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+/*Contact page Fom styles*/
+
+/*input[type="text"],
+input[type="email"],
+textarea {
+    display: block;
+    max-width: 260px;
+    padding: 10px 80px 10px 10px;
+    border: 1px solid rgba(5, 77, 59, 0.5);
+    border-radius: 5px;
+    margin: 1% auto;
+}*/
+
+#name,
+#email-c,
+#feedback {
+    display: block;
+    max-width: 260px;
+    padding: 10px 80px 10px 10px;
+    border: 1px solid rgba(5, 77, 59, 0.5);
+    border-radius: 5px;
+    margin: 1% auto;
+}
+
+/*Styles for login page*/
+#lg-content {
+    margin: 5% 10%;
+}
+
+#login-form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-image: url(images/white-leaf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #fff;
+}
+
+#form-img {
+    display: none;
+}
+
+fieldset {
+    border: none;
+    margin: 0 auto;
+}
+
+fieldset p {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+fieldset p a {
+    color: #255ea8;
+}
+
+#form-headline {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 1.5em;
+}
+
+#email,
+#pass {
+    margin: 0;
+    max-width: 80%;
+    padding: 10px 80px 10px 10px;
+    border: 1px solid rgba(5, 77, 59, 0.5);
+    border-radius: 5px;
+}
+
+#email,
+#pass,
+#login {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#login-form input[type="checkbox"]+label {
+    font-size: 0.7em;
+}
+
+
+/*for page controls*/
+.clearfix::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.sm-account {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid rgba(5, 77, 59, 0.5);
+    display: inline-block;
+    cursor: pointer;
+    color: #054d3b;
+    font-size: 0.7em;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 5px 5px 0;
+}
+
+.btn {
+    padding: 10px 50px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid rgba(5, 77, 59, 0.5);
+    display: inline-block;
+    cursor: pointer;
+    background-color: #054d3b;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.9em;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 10px 10px 0;
+}
+
+/*Style rules for article page*/
+#article-content {
+    padding-bottom: 16%;
+    margin: 3% 10%;
+    line-height: 1.5em;
+    background-image: url(images/soil.png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: contain;
+}
+
+.article-heading {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 2em;
+    margin: 3% 0;
+    line-height: 1.5em;
+}
+
+/*Style rules for list items on Article page*/
+dt {
+    font-weight: bold;
+}
+
+.buleted-list li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+/*Styles for Cala plant page*/
+#cala-content {
+    margin: 3% 10%;
+    padding: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-image: url(images/white-leaf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid #fff;
+}
+
+#cala-content h1 {
+    font-family: 'Satisfy', sans-serif;
+}
+
+#price {
+    display: inline;
+}
+
+#cala-list {
+    list-style-position: inside;
+    list-style-type: square;
+    margin-bottom: 3%;
+}
+
+#cala-img-char img {
+    max-width: 100%;
+}
+
+/*Input stepper styles*/
+#count {
+    width: 80px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid rgba(5, 77, 59, 0.5);
+    background-color: #fff;
+    color: #054d3b;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 20px;
+}
+
+/*Style rules for Footer content*/
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 63px;
+    background-color: rgba(159, 210, 87, 0.5);
+}
+
 footer .copyright {
-    font-size: 0.75em;
+    font-size: 0.9em;
     text-align: center;
     color: #054d3b;
-    padding: 2% 4%;
-    float: left;
-    width: 75%;
+}
+
+.social {
+    padding-left: 10%;
 }
 
 footer a {
@@ -127,25 +779,130 @@ footer a {
     text-decoration: none;
 }
 
-.social {
-    float: right;
-    width: 20%;
-    padding: 2%;
+/*Media Query for Tablet Viewport */
+@media screen and (max-width: 469px),
+print {
+
+    /*Style rules for Homepage photos*/
+    .photo {
+        max-width: 80%;
+    }
+
+    /*card styles for Perennial page*/
+    .card-p {
+        max-width: 100%;
+    }
+
+    .card-p-text {
+        padding: 2% 8% 2% 2%;
+    }
+
+    .card-p-text h2 {
+        font-size: 1.1em;
+    }
+
+    .card-p-img {
+        max-width: 60%;
+    }
+
+    .card-p-img img {
+        max-width: 100%;
+    }
+
+    /*Style rules for Plant page*/
+    /*Search fiels style rules*/
+    #search {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    #search label {
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    #sr-btn {
+        padding: 10px 15px 10px 15px;
+    }
+
+    #search input {
+        width: 150px;
+    }
+
+    /*Styles for login page*/
+    #login-form {
+        width: 100%;
+    }
+
+    /*Styles for Contact page*/
+    iframe {
+        max-width: 80%;
+        height: fit-content;
+    }
+
+    /*Style for the image on the Cala page*/
+    #cala-img-char img {
+        max-width: 100%;
+    }
 }
 
-.social img {
-    display: inline-block;
-    padding-right: 10%;
+@media screen and (min-width: 470px),
+print {
+
+    /*Styles for login page*/
+    #login-form {
+        width: 85%;
+    }
+
+    /*Search field style rules*/
+    #sr-btn {
+        padding: 10px;
+    }
+
+    /*card styles for Perennial page*/
+    .card-p-text {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 600px),
+print {
+
+    /*Styles for login page*/
+    #login-form {
+        width: 80%;
+    }
+
+    /*card styles for Perennial page*/
+    .card-p-text {
+        font-size: 1.3em;
+        text-align: left;
+    }
 }
 
 /*Media Query for Tablet Viewport */
 @media screen and (min-width: 768px),
 print {
 
-    /*Banner styles*/
+    /*Homepage Banner styles*/
     .tablet-desktop img {
         display: block;
+        position: relative;
         max-width: 100%;
+    }
+
+    #hero {
+        display: block;
+        position: absolute;
+        top: 7%;
+        bottom: 7%;
+        right: 10%;
+        left: 10%;
+        font-family: 'Satisfy', sans-serif;
+        font-size: 4em;
+        color: #fff;
+        text-align: center;
+        vertical-align: middle;
     }
 
     /*Style rules for navigation area*/
@@ -161,7 +918,7 @@ print {
         text-decoration: none;
     }
 
-    /*First block of content style rules*/
+    /*First block of Homepage content style rules*/
     #first-block {
         display: flex;
         flex-direction: row;
@@ -176,18 +933,212 @@ print {
         padding: 3% 5%;
     }
 
-    /*Second block of content style rules*/
+    /*Second block of Homepage content style rules*/
     #sec-block {
         padding: 5% 10%;
     }
 
+    .sec-text h2 {
+        font-family: 'Satisfy', sans-serif;
+        font-size: 1.2em;
+    }
+
+    /*Styles for Plants page*/
+    #pt-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*Search fiels styles*/
+    #search label {
+        font-size: 1.2em;
+    }
+
+    #sr-btn {
+        padding: 10px 30px 10px 30px;
+    }
+
+    /*Style for plant type card*/
+    .card {
+        margin: 2%;
+    }
+
+    #tips {
+        margin: auto;
+    }
+
+    /*Styles for Perennials page*/
+    #perennials-content {
+        margin: 3% 10% 3% 20%;
+    }
+
+    /*card styles for Perennial page*/
+    .card-p {
+        max-width: 90%;
+    }
+
+    .card-p-text {
+        padding: 3%;
+        font-size: 1.3em;
+    }
+
+    .card-p-img {
+        max-width: 90%;
+    }
+
+    .card-p-img img {
+        max-width: 316px;
+    }
+
+    /*Sidebar for Perenial page*/
+    #perennial {
+        width: 90%;
+    }
+
+    /*Styles for Next and Previous page controls*/
+    #controls {
+        width: 80%;
+    }
+
+    /*Styles for a tip container. Tips page*/
+    .tip {
+        padding-right: 10%;
+        font-size: 1em;
+    }
+
+    .tip p {
+        padding-left: 115px;
+    }
+
+    .tip img {
+        display: block;
+        float: left;
+        width: 100px;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        margin-right: 2%;
+    }
+
+    .symbol {
+        display: none;
+    }
+
+    /*Styles for login page*/
+    #login-form {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 950px),
+print {
+
+    /*Styles for login page*/
+    #login-form {
+        width: 100%;
+    }
+
+    #form-img {
+        display: block;
+        float: right;
+    }
+
+    #login-form fieldset {
+        float: left;
+    }
+
+    /*Styles for Perennials page*/
+
+    #perennials-content {
+        margin: 3% 10% 3% 10%;
+    }
+
+    #plants-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /*card styles for Perennial page*/
+    .card-p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 200px;
+        height: fit-content;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin: 2% 2%;
+        background-color: #ffffff;
+    }
+
+    .card-p-text {
+        padding: 5px;
+        font-size: 1.3em;
+        text-align: center;
+        width: 100%;
+    }
+
+    .card-p-text h2 {
+        font-family: 'Satisfy', sans-serif;
+        font-size: 1.4em;
+    }
+
+    .card-p-img img {
+        padding: 5px;
+        max-width: 100%;
+    }
+
+    .card-p-img {
+        max-width: 100%;
+    }
+
+
+    /*Styles  for Perenial page*/
+    #pr-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+    }
+
+    /*Sidebar for Perenial page*/
+    #perennial {
+        width: 100%;
+        height: fit-content;
+    }
+
+    /*Styles for Next and Previous page controls*/
+    #controls {
+        width: 90%;
+    }
+
+
+    /*Cala page. Styles for img and plant characteristics container*/
+    #cala-img-char {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 3%;
+        margin-top: 3%;
+    }
 }
 
 /* Media Query for Laptop Viewport */
 @media screen and (min-width: 1024px),
 print {
 
-    /*Third block of content style rules*/
+    /*Homepage Banner styles*/
+    #hero {
+        top: 9%;
+        bottom: 9%;
+        right: 10%;
+        left: 10%;
+        font-size: 5em;
+    }
+
+    /*Third block of Homepage content style rules*/
     #gardener,
     #educator {
         display: flex;
@@ -205,6 +1156,71 @@ print {
     .sec-text {
         font-size: 1em;
     }
+
+    /*Styles for a tip container. Tip page*/
+    .tip {
+        padding-right: 10%;
+    }
+
+    /*Styles for Login page*/
+    #login-form {
+        width: 95%;
+    }
+
+    /*Styles for Login page*/
+    #form-img {
+        max-width: 100%;
+    }
+
+    /*Styles for Cala plant page*/
+
+    #cala-content {
+        margin: 3% auto;
+        width: 830px;
+    }
+
+    /*Cala page. Styles for img and plant characteristics container*/
+    #cala-img-char {
+        justify-content: flex-start;
+    }
+
+    #characteristics {
+        margin-left: 10%;
+    }
+}
+
+
+@media screen and (min-width: 1120px),
+print {
+
+    /*Styles for Login page*/
+    #login-form {
+        width: 85%;
+    }
+
+    /*Sidebar for Perenial page*/
+    #perennial {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1188px),
+print {
+
+    /*Styles for Login page*/
+    #login-form {
+        width: 80%;
+    }
+
+    /*Styles for Contact page*/
+    #cp-content {
+        margin: 3% 20%;
+    }
+
+    /*Sidebar for Perenial page*/
+    #perennial {
+        width: 50%;
+    }
 }
 
 /* Media Query for Desktop Viewport */
@@ -218,31 +1234,129 @@ print {
         margin: 1% auto;
     }
 
-    /*First block of content style rules*/
+    /*First block of Homepage content style rules*/
     .first-text {
         font-size: 1.4em;
         font-weight: 300;
         padding: 5% 10%;
     }
 
-    /*Second block of content style rules*/
+    /*Second block of Homepage content style rules*/
     #sec-block {
         font-size: 1.4em;
         font-weight: 300;
         padding: 5% 15%;
     }
 
-    /*Third block of content style rules*/
-
+    /*Third block of Homepage content style rules*/
     #gardener,
     #educator,
     #enthusiast {
-        width: 80%;
+        max-width: 90%;
     }
 
     .sec-text {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
 
+    /*Styles for Tips & Resources main area*/
+    #tips {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tip {
+        width: 90%;
+    }
+
+    aside {
+        width: 40%;
+        background-image: url(images/white-leaf-vertical.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*Styles for a tip container*/
+    .tip {
+        padding-right: 10%;
+    }
+
+    /*Styles for Login page*/
+    #login-form {
+        width: 70%;
+    }
+
+    /*Styles for Contact page*/
+    #cp-content {
+        margin: 3% 30%;
+    }
+
+    iframe {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1504px),
+print {
+
+    /*Homepage Banner styles*/
+    #hero {
+        top: 10%;
+        bottom: 10%;
+        right: 10%;
+        left: 10%;
+        font-size: 6em;
+    }
+
+    /*Styles for Login page*/
+    #login-form {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 1600px),
+print {
+
+    /*Sidebar for Perenial page*/
+    #perennial {
+        width: 50%;
+        height: fit-content;
+    }
+
+
+}
+
+@media screen and (min-width: 1910px),
+print {
+
+    /*Third block of Homepage content style rules*/
+    #gardener,
+    #educator,
+    #enthusiast {
+        max-width: 65%;
+    }
+
+    /*Styles for Login page*/
+    #login-form {
+        width: 60%;
+    }
+
+
+
+    /*Prennial Page styles*/
+    #perennials-content {
+        max-width: 1630px;
+    }
+
+    /*Sidebar for Perenial page*/
+    /*Sidebar for Perenial page*/
+    #perennial {
+        max-width: 500px;
+    }
+
+    nav {
+        max-width: 2500px;
+    }
 }
